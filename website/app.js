@@ -22,12 +22,12 @@ const postData = async (url = "", data = {}) => {
 
 // Create a new date instance dynamically with JS
 let d = new Date();
-let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
+let newDate = (d.getMonth()+1)+'.'+ d.getDate()+'.'+ d.getFullYear();
 
 const appUrl="http://localhost:3000/";
 //API
 const baseUrl='https://api.openweathermap.org/data/2.5/weather?zip=';
-const apiKey='&appid=ff0a18b470a21f9979a6d58f53599255';
+const apiKey='&appid=ff0a18b470a21f9979a6d58f53599255&units=imperial';
 
 //listen to generate button
 document.getElementById('generate').addEventListener('click',performAction)
